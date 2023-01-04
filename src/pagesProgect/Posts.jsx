@@ -11,7 +11,7 @@ const Posts = (props) => {
   useEffect(() => {
     const userID = JSON.parse(sessionStorage.getItem("user")).id;
     console.log(userID);
-    const url = `https://jsonplaceholder.typicode.com/users/${userID}/posts`;
+    const url = `http://localhost:3010/users/${userID}/posts`;
     fetch(url)
       .then((res) => res.json())
       .then((data) => {

@@ -9,7 +9,7 @@ const Todos = () => {
   useEffect(() => {
     const userID = JSON.parse(sessionStorage.getItem("user")).id;
     console.log(userID);
-    const url = `https://jsonplaceholder.typicode.com/users/${userID}/todos`;
+    const url = `http://localhost:3010/users/${userID}/todos`;
     fetch(url)
       .then((res) => res.json())
       .then((data) => {

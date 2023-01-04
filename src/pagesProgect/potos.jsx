@@ -8,7 +8,7 @@ const Potos = () => {
     let { pObjId } = useParams();
 console.log(pObjId)
     useEffect(() => {
-        const url = `https://jsonplaceholder.typicode.com/albums/${pObjId}/photos`;
+        const url = `http://localhost:3010/albums/${pObjId}/photos`;
         fetch(url)
           .then((res) => res.json())
           .then((data) => {

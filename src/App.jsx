@@ -16,7 +16,7 @@ function App() {
   const [allInfo, setAllInfo] = useState({});
 
   useMemo(() => {
-    fetch(`https://jsonplaceholder.typicode.com/users`)
+    fetch(`http://localhost:3010/users`)
       .then((res) => res.json())
       .then((data) => setAllInfo(data));
   }, []);

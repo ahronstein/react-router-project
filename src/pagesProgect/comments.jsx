@@ -6,7 +6,7 @@ const Comments = () => {
   let { postId } = useParams();
   console.log(postId);
   useEffect(() => {
-    const url = `https://jsonplaceholder.typicode.com/posts/${postId}/comments`;
+    const url = `http://localhost:3010/posts/${postId}/comments`;
     fetch(url)
       .then((res) => res.json())
       .then((data) => {

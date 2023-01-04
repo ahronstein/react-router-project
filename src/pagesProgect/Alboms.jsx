@@ -7,7 +7,7 @@ const Alboms = (props) => {
     useEffect(() => {
     const userID = JSON.parse(sessionStorage.getItem("user")).id;
     console.log(userID);
-    const url = `https://jsonplaceholder.typicode.com/users/${userID}/albums`;
+    const url = `http://localhost:3010/users/${userID}/albums`;
     fetch(url)
       .then((res) => res.json())
       .then((data) => {
